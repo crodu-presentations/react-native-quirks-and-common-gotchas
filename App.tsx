@@ -9,7 +9,7 @@ const App = () => {
   myValue = 0;
 
   return (
-    <View style={styles.container}>
+    <View testID="container" style={styles.container}>
       <Text style={styles.title}>Hello dev.js</Text>
       {!!myText && <Text style={styles.description}>{myText}</Text>}
       {!!myValue && <Text style={styles.description}>{myValue}</Text>}
