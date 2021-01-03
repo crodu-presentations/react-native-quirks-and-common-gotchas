@@ -1,40 +1,19 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { Button, View } from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
-import { LottieSpinner } from './components/LottieSpinner';
-import { Spinner } from './components/Spinner';
-import { SpinnerNative } from './components/SpinnerNative';
-import { actBusy } from './utils/actBusy';
+import { Routes } from './navigation/Routes';
+import { HomeScreen } from './screens/HomeScreen';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View testID="container" style={styles.container}>
-      <View style={styles.spinnerWrapper}>
-        <Spinner />
-        <SpinnerNative />
-        <LottieSpinner />
-      </View>
-      <Button
-        testID="button.spam_js_thread"
-        title="Spam JS Thread"
-        onPress={actBusy}
-      />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name={Routes.Home} component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = EStyleSheet.create({
-  container: {
-    backgroundColor: 'lightblue',
-    flexGrow: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  spinnerWrapper: {
-    flexDirection: 'row',
-    margin: 24,
-    marginBottom: 48,
-  },
-});
 
 export default App;
