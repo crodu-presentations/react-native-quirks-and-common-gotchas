@@ -1,14 +1,18 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Button, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { Spinner } from './components/Spinner';
+import { SpinnerNative } from './components/SpinnerNative';
+import { actBusy } from './utils/actBusy';
 
 const App = () => {
   return (
     <View testID="container" style={styles.container}>
       <View style={styles.spinnerWrapper}>
         <Spinner />
+        <SpinnerNative />
       </View>
+      <Button title="Spam JS Thread" onPress={actBusy} />
     </View>
   );
 };
@@ -23,6 +27,7 @@ const styles = EStyleSheet.create({
   spinnerWrapper: {
     flexDirection: 'row',
     margin: 24,
+    marginBottom: 48,
   },
 });
 

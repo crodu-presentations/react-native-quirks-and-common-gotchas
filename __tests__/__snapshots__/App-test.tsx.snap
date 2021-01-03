@@ -17,6 +17,7 @@ exports[`App matches snapshot 1`] = `
       Object {
         "flexDirection": "row",
         "margin": 24,
+        "marginBottom": 48,
       }
     }
   >
@@ -111,6 +112,139 @@ exports[`App matches snapshot 1`] = `
           }
         }
       />
+    </View>
+    <View
+      pointerEvents="none"
+      style={
+        Object {
+          "height": 80,
+          "marginHorizontal": "auto",
+          "position": "relative",
+          "width": 80,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderColor": "transparent",
+            "borderRadius": 32,
+            "borderStyle": "solid",
+            "borderTopColor": "#fff",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "transparent",
+            "borderRadius": 32,
+            "borderStyle": "solid",
+            "borderTopColor": "#fff",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "transparent",
+            "borderRadius": 32,
+            "borderStyle": "solid",
+            "borderTopColor": "#fff",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderColor": "transparent",
+            "borderRadius": 32,
+            "borderStyle": "solid",
+            "borderTopColor": "#fff",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
+            "width": 64,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    accessibilityRole="button"
+    accessibilityState={Object {}}
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "margin": 8,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Spam JS Thread
+      </Text>
     </View>
   </View>
 </View>
