@@ -15,13 +15,64 @@ exports[`App matches snapshot 1`] = `
   <Text
     style={
       Object {
-        "color": "black",
-        "fontSize": 24,
-        "fontWeight": "600",
+        "color": "#000",
+        "fontFamily": "JosefinSans-Light",
+        "fontSize": 36,
+        "marginBottom": 10,
+        "textAlign": "center",
       }
     }
   >
-    Hello World!
+    Hello World! - in JosefinSans-Light
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontFamily": "JosefinSans-Light",
+          "fontSize": 36,
+          "marginBottom": 10,
+          "textAlign": "center",
+        },
+        Object {
+          "fontWeight": "bold",
+        },
+      ]
+    }
+  >
+    This text should be written in JosefinSans-Bold font...
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#333",
+        "fontFamily": "monospace",
+        "fontSize": 18,
+        "marginBottom": 10,
+        "textAlign": "center",
+      }
+    }
+  >
+    Here we want the monospaced font
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#333",
+          "fontFamily": "monospace",
+          "fontSize": 18,
+          "marginBottom": 10,
+          "textAlign": "center",
+        },
+        Object {
+          "fontWeight": "bold",
+        },
+      ]
+    }
+  >
+    And here the font should be monospaced and bold.
   </Text>
 </View>
 `;

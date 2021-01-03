@@ -2,15 +2,16 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 const App = () => {
-  const myText = '';
-
   return (
     <View testID="container" style={styles.container}>
-      <Text style={styles.title}>Hello World!</Text>
-      {/* we dont want to show the component below if `myText` is empty */}
-      {!!myText && (
-        <Text style={styles.description}>Hi, the message is: "{myText}"</Text>
-      )}
+      <Text style={styles.title}>Hello World! - in JosefinSans-Light</Text>
+      <Text style={[styles.title, styles.bold]}>
+        This text should be written in JosefinSans-Bold font...
+      </Text>
+      <Text style={styles.body}>Here we want the monospaced font</Text>
+      <Text style={[styles.body, styles.bold]}>
+        And here the font should be monospaced and bold.
+      </Text>
     </View>
   );
 };
@@ -23,15 +24,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: 'black',
+    textAlign: 'center',
+    fontSize: 36,
+    fontFamily: 'JosefinSans-Light',
+    color: '#000',
+    marginBottom: 10,
   },
-  description: {
-    marginTop: 8,
+  bold: {
+    fontWeight: 'bold',
+  },
+  body: {
+    textAlign: 'center',
+    fontFamily: 'monospace',
     fontSize: 18,
-    fontWeight: '400',
     color: '#333',
+    marginBottom: 10,
   },
 });
 
