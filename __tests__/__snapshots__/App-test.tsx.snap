@@ -4,9 +4,6 @@ exports[`App matches snapshot 1`] = `
 <View
   style={
     Object {
-      "@media (min-height: 800) and (max-height: 1200)": Object {
-        "marginVertical": "25%",
-      },
       "alignItems": "center",
       "backgroundColor": "lightblue",
       "flexGrow": 1,
@@ -15,83 +12,125 @@ exports[`App matches snapshot 1`] = `
   }
   testID="container"
 >
-  <Text
+  <View
     style={
-      Array [
-        Object {
-          "color": "#000",
-          "fontFamily": "JosefinSans-Light",
-          "fontSize": 36,
-          "marginBottom": 10,
-          "textAlign": "center",
-        },
-        Object {
-          "fontFamily": "JosefinSans-Light",
-          "fontSize": "2rem",
-        },
-      ]
+      Object {
+        "flexDirection": "row",
+        "margin": 24,
+      }
     }
   >
-    Hello World! - in JosefinSans-Light
-  </Text>
-  <Text
-    style={
-      Array [
+    <View
+      pointerEvents="none"
+      style={
         Object {
-          "color": "#000",
-          "fontFamily": "JosefinSans-Light",
-          "fontSize": 36,
-          "marginBottom": 10,
-          "textAlign": "center",
-        },
-        Object {
-          "fontFamily": "JosefinSans-SemiBold",
-          "fontSize": "1.5rem",
-        },
-      ]
-    }
-  >
-    This text should be written in JosefinSans-Bold font...
-  </Text>
-  <Text
-    style={
-      Array [
-        Object {
-          "color": "#333",
-          "fontFamily": "monospace",
-          "fontSize": 18,
-          "marginBottom": 10,
-          "textAlign": "center",
-        },
-        Object {
-          "fontFamily": "Courier",
-          "fontSize": "1rem",
-          "fontWeight": "normal",
-        },
-      ]
-    }
-  >
-    Here we want the monospaced font
-  </Text>
-  <Text
-    style={
-      Array [
-        Object {
-          "color": "#333",
-          "fontFamily": "monospace",
-          "fontSize": 18,
-          "marginBottom": 10,
-          "textAlign": "center",
-        },
-        Object {
-          "fontFamily": "Courier",
-          "fontSize": "1rem",
-          "fontWeight": "bold",
-        },
-      ]
-    }
-  >
-    And here the font should be monospaced and bold.
-  </Text>
+          "height": 80,
+          "marginHorizontal": "auto",
+          "position": "relative",
+          "width": 80,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "@keyframes spin": Object {
+              "0%": Object {
+                "transform": "rotate(0deg)",
+              },
+              "100%": Object {
+                "transform": "rotate(360deg)",
+              },
+            },
+            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
+            "borderColor": "transparent",
+            "borderRadius": 32,
+            "borderStyle": "solid",
+            "borderTopColor": "#fff",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "@keyframes spin": Object {
+              "0%": Object {
+                "transform": "rotate(0deg)",
+              },
+              "100%": Object {
+                "transform": "rotate(360deg)",
+              },
+            },
+            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
+            "animationDelay": "-0.45s",
+            "borderColor": "transparent",
+            "borderRadius": 32,
+            "borderStyle": "solid",
+            "borderTopColor": "#fff",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "@keyframes spin": Object {
+              "0%": Object {
+                "transform": "rotate(0deg)",
+              },
+              "100%": Object {
+                "transform": "rotate(360deg)",
+              },
+            },
+            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
+            "animationDelay": "-0.3s",
+            "borderColor": "transparent",
+            "borderRadius": 32,
+            "borderStyle": "solid",
+            "borderTopColor": "#fff",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "@keyframes spin": Object {
+              "0%": Object {
+                "transform": "rotate(0deg)",
+              },
+              "100%": Object {
+                "transform": "rotate(360deg)",
+              },
+            },
+            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
+            "animationDelay": "-0.15s",
+            "borderColor": "transparent",
+            "borderRadius": 32,
+            "borderStyle": "solid",
+            "borderTopColor": "#fff",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "width": 64,
+          }
+        }
+      />
+    </View>
+  </View>
 </View>
 `;
