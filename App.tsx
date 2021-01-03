@@ -1,13 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Typography } from './styles/fonts';
 
 const App = () => {
   return (
     <View testID="container" style={styles.container}>
-      <Text style={styles.title}>Hello dev.js</Text>
-      <Text style={[styles.title, styles.bold]}>Czy to jest pogrubione?</Text>
-      <Text style={styles.body}>Zażółć gęślą jaźń</Text>
-      <Text style={[styles.body, styles.bold]}>
+      <Text style={[styles.title, Typography.h1]}>Hello dev.js</Text>
+      <Text style={[styles.title, Typography.h2]}>Czy to jest pogrubione?</Text>
+      <Text style={[styles.body, Typography.body]}>Zażółć gęślą jaźń</Text>
+      <Text style={[styles.body, Typography.bodyStrong]}>
         Pogrubione: Zażółć gęślą jaźń
       </Text>
     </View>
