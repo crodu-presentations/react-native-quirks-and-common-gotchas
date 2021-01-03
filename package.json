@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "e2e:start": "RN_FLAVOR=e2e react-native start",
     "e2e:build:android": "detox build --configuration android.emu.debug",
     "e2e:build:ios": "detox build --configuration ios.sim.debug",
     "e2e:test:android": "detox test --configuration android.emu.debug",
@@ -14,6 +15,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "lottie-ios": "3.1.8",
+    "lottie-react-native": "^3.5.0",
     "react": "16.13.1",
     "react-native": "0.63.3",
     "react-native-extended-stylesheet": "^0.12.0"
