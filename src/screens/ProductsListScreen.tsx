@@ -7,15 +7,28 @@ import {
   Text,
   TouchableOpacity,
   useWindowDimensions,
+  View,
 } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { connect, ConnectedProps } from 'react-redux';
 import { ProductStackParams } from '../navigation/navigatorParams';
 import { Routes } from '../navigation/Routes';
-import { productsFetchRequest } from '../redux/products/productActions';
+import {
+  productsFetchRequest,
+  toggleWishlist,
+} from '../redux/products/productActions';
 import { Product } from '../redux/products/productModels';
 import { RootState } from '../redux/rootReducer';
 import { Typography } from '../styles/fonts';
+
+type NavigationProp = StackNavigationProp<
+  ProductStackParams,
+  Routes.ProductsList
+>;
+
+interface OwnProps {
+  navigation: NavigationProp;
+}
 
 const mapState = (state: RootState) => ({
   products: state.products.products,
@@ -23,20 +36,14 @@ const mapState = (state: RootState) => ({
 
 const mapDispatch = {
   fetchProducts: productsFetchRequest,
+  toggleWishlist: toggleWishlist,
 };
 
 const connector = connect(mapState, mapDispatch);
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
-type NavigationProp = StackNavigationProp<
-  ProductStackParams,
-  Routes.ProductsList
->;
-
-type Props = PropsFromRedux & {
-  navigation: NavigationProp;
-};
+type Props = PropsFromRedux & OwnProps;
 
 const NUM_COLUMNS = 2;
 
@@ -94,8 +101,15 @@ function ProductListItem({ item, onPress }: ListItemProps) {
           styles.image,
         ]}
       />
-      <Text style={[Typography.bodyStrong, styles.name]}>{item.name}</Text>
-      <Text style={[Typography.body, styles.description]}>
+      <View style={styles.wishlistRow}>
+        <Text style={[Typography.bodyStrong, styles.name]}>{item.name}</Text>
+        <View style={styles.wishlistButton}>
+          <Text style={styles.wishlistIcon}>
+            {item.isOnWishlist ? '❤️' : '🤍'}
+          </Text>
+        </View>
+      </View>
+      <Text style={[Typography.body, styles.description]} numberOfLines={3}>
         {item.description}
       </Text>
     </TouchableOpacity>
@@ -110,12 +124,23 @@ const styles = EStyleSheet.create({
   name: {
     fontSize: '1.2rem',
     marginHorizontal: 5,
-    marginTop: 8,
+    marginVertical: 8,
   },
   description: {
     fontSize: '0.8rem',
     marginHorizontal: 5,
-    marginVertical: 8,
+    marginBottom: 16,
+  },
+  wishlistRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  wishlistButton: {
+    padding: 12,
+  },
+  wishlistIcon: {
+    fontSize: 24,
   },
 });
 

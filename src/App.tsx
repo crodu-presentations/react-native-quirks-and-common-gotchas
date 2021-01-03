@@ -13,7 +13,7 @@ import { Routes } from './navigation/Routes';
 import store from './redux/store';
 import { ChartScreen } from './screens/ChartScreen';
 import { HomeScreen } from './screens/HomeScreen';
-import { ProductDetailsScreen } from './screens/ProductDetailsScreen';
+import ProductDetailsScreen from './screens/ProductDetailsScreen';
 import ProductsListScreen from './screens/ProductsListScreen';
 
 const HomeStack = createStackNavigator<HomeStackParams>();
