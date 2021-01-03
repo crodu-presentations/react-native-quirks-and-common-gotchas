@@ -289,6 +289,7 @@ exports[`App matches snapshot 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
+                          "backgroundColor": "lightblue",
                           "flexGrow": 1,
                           "justifyContent": "center",
                         }
@@ -297,14 +298,98 @@ exports[`App matches snapshot 1`] = `
                     >
                       <Text
                         style={
-                          Object {
-                            "fontFamily": "JosefinSans-Light",
-                            "fontSize": "2rem",
-                          }
+                          Array [
+                            undefined,
+                            Object {
+                              "fontFamily": "JosefinSans-Light",
+                              "fontSize": "2rem",
+                            },
+                          ]
                         }
                       >
-                        Home Screen
+                        Hello, Home Screen
                       </Text>
+                      <View
+                        accessible={true}
+                        focusable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "#eee",
+                            "borderRadius": 3,
+                            "margin": 10,
+                            "minWidth": 200,
+                            "opacity": 1,
+                            "padding": 10,
+                          }
+                        }
+                        testID="btn.go_to_chart.100"
+                      >
+                        <Text>
+                          Chart with 100 points
+                        </Text>
+                      </View>
+                      <View
+                        accessible={true}
+                        focusable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "#eee",
+                            "borderRadius": 3,
+                            "margin": 10,
+                            "minWidth": 200,
+                            "opacity": 1,
+                            "padding": 10,
+                          }
+                        }
+                        testID="btn.go_to_chart.1000"
+                      >
+                        <Text>
+                          Chart with 1000 points
+                        </Text>
+                      </View>
+                      <View
+                        accessible={true}
+                        focusable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "#eee",
+                            "borderRadius": 3,
+                            "margin": 10,
+                            "minWidth": 200,
+                            "opacity": 1,
+                            "padding": 10,
+                          }
+                        }
+                        testID="btn.go_to_chart.10000"
+                      >
+                        <Text>
+                          Chart with 10000 points
+                        </Text>
+                      </View>
                     </View>
                   </View>
                 </View>
