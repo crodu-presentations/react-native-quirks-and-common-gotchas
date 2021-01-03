@@ -22,12 +22,3 @@ target 'devjsdemo' do
     flipper_post_install(installer)
   end
 end
-
-target 'devjsdemo-tvOS' do
-  # Pods for devjsdemo-tvOS
-
-  target 'devjsdemo-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end

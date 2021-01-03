@@ -2,12 +2,17 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 const App = () => {
+  let myText = 'hello world';
+  myText = '';
+
+  let myValue = 5;
+  myValue = 0;
+
   return (
-    <View style={styles.container}>
+    <View testID="container" style={styles.container}>
       <Text style={styles.title}>Hello dev.js</Text>
-      <Text style={styles.description}>
-        Na razie nic tu ciekawego nie ma....
-      </Text>
+      {!!myText && <Text style={styles.description}>{myText}</Text>}
+      {!!myValue && <Text style={styles.description}>{myValue}</Text>}
     </View>
   );
 };
