@@ -8,13 +8,17 @@ import { actBusy } from './utils/actBusy';
 
 const App = () => {
   return (
-    <View style={styles.container}>
+    <View testID="container" style={styles.container}>
       <View style={styles.spinnerWrapper}>
         <Spinner />
         <SpinnerNative />
         <LottieSpinner />
       </View>
-      <Button title="Spam JS Thread" onPress={actBusy} />
+      <Button
+        testID="button.spam_js_thread"
+        title="Spam JS Thread"
+        onPress={actBusy}
+      />
     </View>
   );
 };
