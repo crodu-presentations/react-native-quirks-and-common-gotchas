@@ -14,7 +14,11 @@ const App = () => {
         <SpinnerNative />
         <LottieSpinner />
       </View>
-      <Button title="Spam JS Thread" onPress={actBusy} />
+      <Button
+        testID="button.spam_js_thread"
+        title="Spam JS Thread"
+        onPress={actBusy}
+      />
     </View>
   );
 };

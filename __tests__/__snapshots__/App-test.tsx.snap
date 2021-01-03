@@ -275,6 +275,7 @@ exports[`App matches snapshot 1`] = `
         "opacity": 1,
       }
     }
+    testID="button.spam_js_thread"
   >
     <View
       style={
