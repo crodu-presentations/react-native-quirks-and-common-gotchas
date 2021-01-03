@@ -15,7 +15,7 @@ exports[`App matches snapshot 1`] = `
   <Text
     style={
       Object {
-        "color": "black",
+        "color": "#333",
         "fontSize": 24,
         "fontWeight": "600",
       }
