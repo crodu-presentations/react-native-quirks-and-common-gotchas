@@ -2,12 +2,14 @@ import React from 'react';
 import { View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { Spinner } from './components/Spinner';
+import { SpinnerNative } from './components/SpinnerNative';
 
 const App = () => {
   return (
     <View style={styles.container}>
       <View style={styles.spinnerWrapper}>
         <Spinner />
+        <SpinnerNative />
       </View>
     </View>
   );
