@@ -4,90 +4,128 @@ exports[`App matches snapshot 1`] = `
 <View
   style={
     Object {
-      "@media (min-width: 350) and (max-width: 500)": Object {
-        "marginHorizontal": "10%",
-        "width": "80%",
-      },
       "alignItems": "center",
       "backgroundColor": "lightblue",
       "flexGrow": 1,
       "justifyContent": "center",
-      "width": "100%",
     }
   }
-  testID="container"
 >
-  <Text
+  <View
     style={
-      Array [
-        Object {
-          "color": "#000",
-          "fontFamily": "JosefinSans-Light",
-          "fontSize": 36,
-          "textAlign": "center",
-        },
-        Object {
-          "fontFamily": "JosefinSans-Light",
-          "fontSize": "2rem",
-        },
-      ]
+      Object {
+        "flexDirection": "row",
+        "margin": 24,
+      }
     }
   >
-    Hello dev.js
-  </Text>
-  <Text
-    style={
-      Array [
+    <View
+      pointerEvents="none"
+      style={
         Object {
-          "color": "#000",
-          "fontFamily": "JosefinSans-Light",
-          "fontSize": 36,
-          "textAlign": "center",
-        },
-        Object {
-          "fontFamily": "JosefinSans-SemiBold",
-          "fontSize": "1.5rem",
-        },
-      ]
-    }
-  >
-    Czy to jest pogrubione?
-  </Text>
-  <Text
-    style={
-      Array [
-        Object {
-          "color": "#333",
-          "fontFamily": "monospace",
-          "fontSize": 18,
-        },
-        Object {
-          "fontFamily": "Courier",
-          "fontSize": "1rem",
-          "fontWeight": "normal",
-        },
-      ]
-    }
-  >
-    Zażółć gęślą jaźń
-  </Text>
-  <Text
-    style={
-      Array [
-        Object {
-          "color": "#333",
-          "fontFamily": "monospace",
-          "fontSize": 18,
-        },
-        Object {
-          "fontFamily": "Courier",
-          "fontSize": "1rem",
-          "fontWeight": "bold",
-        },
-      ]
-    }
-  >
-    Pogrubione: Zażółć gęślą jaźń
-  </Text>
+          "height": 80,
+          "margin": "0 auto",
+          "position": "relative",
+          "width": 80,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "@keyframes spin": Object {
+              "0%": Object {
+                "transform": "rotate(0deg)",
+              },
+              "100%": Object {
+                "transform": "rotate(360deg)",
+              },
+            },
+            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
+            "borderColor": "#fff transparent transparent transparent",
+            "borderRadius": "50%",
+            "borderStyle": "solid",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "@keyframes spin": Object {
+              "0%": Object {
+                "transform": "rotate(0deg)",
+              },
+              "100%": Object {
+                "transform": "rotate(360deg)",
+              },
+            },
+            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
+            "animationDelay": "-0.45s",
+            "borderColor": "#fff transparent transparent transparent",
+            "borderRadius": "50%",
+            "borderStyle": "solid",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "@keyframes spin": Object {
+              "0%": Object {
+                "transform": "rotate(0deg)",
+              },
+              "100%": Object {
+                "transform": "rotate(360deg)",
+              },
+            },
+            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
+            "animationDelay": "-0.3s",
+            "borderColor": "#fff transparent transparent transparent",
+            "borderRadius": "50%",
+            "borderStyle": "solid",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "@keyframes spin": Object {
+              "0%": Object {
+                "transform": "rotate(0deg)",
+              },
+              "100%": Object {
+                "transform": "rotate(360deg)",
+              },
+            },
+            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
+            "animationDelay": "-0.15s",
+            "borderColor": "#fff transparent transparent transparent",
+            "borderRadius": "50%",
+            "borderStyle": "solid",
+            "borderWidth": 8,
+            "height": 64,
+            "margin": 8,
+            "position": "absolute",
+            "width": 64,
+          }
+        }
+      />
+    </View>
+  </View>
 </View>
 `;
