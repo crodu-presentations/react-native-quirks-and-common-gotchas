@@ -22,17 +22,6 @@ exports[`App matches snapshot 1`] = `
   >
     Hello dev.js
   </Text>
-  <Text
-    style={
-      Object {
-        "color": "#333",
-        "fontSize": 18,
-        "fontWeight": "400",
-        "marginTop": 8,
-      }
-    }
-  >
-    Na razie nic tu ciekawego nie ma....
-  </Text>
+  
 </View>
 `;
