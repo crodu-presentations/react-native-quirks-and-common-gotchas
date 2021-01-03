@@ -1,5 +1,7 @@
 import { StackNavigationProp } from '@react-navigation/stack';
+import { DateTime } from 'luxon';
 import React, { useCallback } from 'react';
+import { FormattedNumber } from 'react-intl';
 import {
   FlatList,
   Image,
@@ -122,8 +124,13 @@ function ProductListItem({ itemId, onPress, onToggleWishlist }: ListItemProps) {
           </Text>
         </TouchableOpacity>
       </View>
-      <Text style={[Typography.body, styles.description]} numberOfLines={3}>
-        {item.description}
+      <Text style={[Typography.bodyStrong, styles.description]}>
+        <FormattedNumber value={item.price} style="currency" currency="EUR" />
+      </Text>
+      <Text style={[Typography.body, styles.description]}>
+        Last updated (German locale):
+        {'\n'}
+        {DateTime.fromISO(item.updatedAt).setLocale('de').toRelative()}
       </Text>
     </TouchableOpacity>
   );

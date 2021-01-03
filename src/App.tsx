@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
+import { IntlProvider } from 'react-intl';
 import { Text } from 'react-native';
 import { Provider } from 'react-redux';
 import {
@@ -25,26 +26,28 @@ const App = () => {
   const iconStyle = { fontSize: 24 };
   return (
     <Provider store={store}>
-      <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen
-            name={Routes.HomeStack}
-            component={HomeStackScreen}
-            options={{
-              tabBarIcon: () => <Text style={iconStyle}>🏠</Text>,
-              tabBarLabel: 'Home',
-            }}
-          />
-          <Tab.Screen
-            name={Routes.ProductStack}
-            component={ProductStackScreen}
-            options={{
-              tabBarIcon: () => <Text style={iconStyle}>🍕</Text>,
-              tabBarLabel: 'Products',
-            }}
-          />
-        </Tab.Navigator>
-      </NavigationContainer>
+      <IntlProvider messages={{}} locale="de" defaultLocale="en">
+        <NavigationContainer>
+          <Tab.Navigator>
+            <Tab.Screen
+              name={Routes.HomeStack}
+              component={HomeStackScreen}
+              options={{
+                tabBarIcon: () => <Text style={iconStyle}>🏠</Text>,
+                tabBarLabel: 'Home',
+              }}
+            />
+            <Tab.Screen
+              name={Routes.ProductStack}
+              component={ProductStackScreen}
+              options={{
+                tabBarIcon: () => <Text style={iconStyle}>🍕</Text>,
+                tabBarLabel: 'Products',
+              }}
+            />
+          </Tab.Navigator>
+        </NavigationContainer>
+      </IntlProvider>
     </Provider>
   );
 };
