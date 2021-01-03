@@ -5,6 +5,11 @@ const App = () => {
   return (
     <View testID="container" style={styles.container}>
       <Text style={styles.title}>Hello dev.js</Text>
+      <Text style={[styles.title, styles.bold]}>Czy to jest pogrubione?</Text>
+      <Text style={styles.body}>Zażółć gęślą jaźń</Text>
+      <Text style={[styles.body, styles.bold]}>
+        Pogrubione: Zażółć gęślą jaźń
+      </Text>
     </View>
   );
 };
@@ -17,8 +22,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 24,
-    fontWeight: '600',
+    textAlign: 'center',
+    fontSize: 36,
+    fontFamily: 'JosefinSans-Light',
+    color: '#000',
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
+  body: {
+    fontFamily: 'monospace',
+    fontSize: 18,
     color: '#333',
   },
 });

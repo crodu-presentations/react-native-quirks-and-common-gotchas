@@ -11,6 +11,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		62DD21582586A38F0083C1D0 /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DD21562586A38F0083C1D0 /* JosefinSans-Light.ttf */; };
+		62DD21592586A38F0083C1D0 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62DD21572586A38F0083C1D0 /* JosefinSans-SemiBold.ttf */; };
 		8093CCFDC7E2F02A315DBF89 /* libPods-devjsdemo-devjsdemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4619E3A18FFB229130D13826 /* libPods-devjsdemo-devjsdemoTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C726EDF0BDAB8D31E3DAD520 /* libPods-devjsdemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8003031552D93888E64B5749 /* libPods-devjsdemo.a */; };
@@ -41,6 +43,8 @@
 		14804750F351370754EC31F5 /* Pods-devjsdemo-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devjsdemo-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-devjsdemo-tvOSTests/Pods-devjsdemo-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4619E3A18FFB229130D13826 /* libPods-devjsdemo-devjsdemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-devjsdemo-devjsdemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		554566425696C9CE4998D4DA /* libPods-devjsdemo-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-devjsdemo-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DD21562586A38F0083C1D0 /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Light.ttf"; sourceTree = "<group>"; };
+		62DD21572586A38F0083C1D0 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		71B45EB30C3365E606340B27 /* Pods-devjsdemo-devjsdemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devjsdemo-devjsdemoTests.debug.xcconfig"; path = "Target Support Files/Pods-devjsdemo-devjsdemoTests/Pods-devjsdemo-devjsdemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8003031552D93888E64B5749 /* libPods-devjsdemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-devjsdemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = devjsdemo/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		13B07FAE1A68108700A75B9A /* devjsdemo */ = {
 			isa = PBXGroup;
 			children = (
+				62DD21562586A38F0083C1D0 /* JosefinSans-Light.ttf */,
+				62DD21572586A38F0083C1D0 /* JosefinSans-SemiBold.ttf */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				62DD21592586A38F0083C1D0 /* JosefinSans-SemiBold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				62DD21582586A38F0083C1D0 /* JosefinSans-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
