@@ -2,11 +2,11 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import { RootStackParams } from '../navigation/RootStackParams';
+import { HomeStackParams } from '../navigation/navigatorParams';
 import { Routes } from '../navigation/Routes';
 import { Typography } from '../styles/fonts';
 
-type NavigationProp = StackNavigationProp<RootStackParams, Routes.Home>;
+type NavigationProp = StackNavigationProp<HomeStackParams, Routes.Home>;
 
 interface Props {
   navigation: NavigationProp;

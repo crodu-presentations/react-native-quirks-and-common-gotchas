@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Text, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { CustomChart } from '../components/CustomChart';
-import { RootStackParams } from '../navigation/RootStackParams';
+import { HomeStackParams } from '../navigation/navigatorParams';
 import { Routes } from '../navigation/Routes';
 
 const allData = _.range(0, 10, 0.001).map((x) => ({
@@ -12,7 +12,7 @@ const allData = _.range(0, 10, 0.001).map((x) => ({
   y: (Math.sin((Math.PI * x) / 2) * x) / 10,
 }));
 
-type CurrentRouteProp = RouteProp<RootStackParams, Routes.Chart>;
+type CurrentRouteProp = RouteProp<HomeStackParams, Routes.Chart>;
 
 interface Props {
   route: CurrentRouteProp;
