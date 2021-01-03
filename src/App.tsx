@@ -5,10 +5,14 @@ const App = () => {
   let myText = 'hello world';
   myText = '';
 
+  let myValue = 5;
+  myValue = 0;
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Hello dev.js</Text>
-      {myText && <Text style={styles.description}>{myText}</Text>}
+      {!!myText && <Text style={styles.description}>{myText}</Text>}
+      {!!myValue && <Text style={styles.description}>{myValue}</Text>}
     </View>
   );
 };
