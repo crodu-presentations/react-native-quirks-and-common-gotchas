@@ -16,9 +16,7 @@ interface OwnProps {
 }
 
 const mapState = (state: RootState, ownProps: OwnProps) => ({
-  product: state.products.products.find(
-    (p) => p.id === ownProps.route.params.productId,
-  ),
+  product: state.products.byId[ownProps.route.params.productId],
 });
 
 const mapDispatch = {

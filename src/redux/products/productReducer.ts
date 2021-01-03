@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {
   PRODUCTS_FETCH_REQUESTED,
   PRODUCTS_FETCH_SUCCEEDED,
@@ -7,15 +8,20 @@ import {
 import { Product } from './productModels';
 
 export interface ProductsState {
-  products: Product[];
+  ids: Product['id'][];
+  byId: Record<Product['id'], Product>;
   isLoading?: boolean;
 }
 
 const initialState: ProductsState = {
-  products: [],
+  ids: [],
+  byId: {},
 };
 
-const reducer = (state = initialState, action: ProductAction) => {
+const reducer = (
+  state = initialState,
+  action: ProductAction,
+): ProductsState => {
   switch (action.type) {
     case PRODUCTS_FETCH_REQUESTED:
       return {
@@ -27,22 +33,23 @@ const reducer = (state = initialState, action: ProductAction) => {
       return {
         ...state,
         isLoading: false,
-        products,
+        ids: products.map((p) => p.id),
+        byId: _.keyBy(products, 'id'),
       };
     }
 
     case TOGGLE_WISHLIST: {
       const { productId } = action.payload;
+      const product = state.byId[productId];
       return {
         ...state,
-        products: state.products.map((p) =>
-          p.id === productId
-            ? {
-                ...p,
-                isOnWishlist: !p.isOnWishlist,
-              }
-            : p,
-        ),
+        byId: {
+          ...state.byId,
+          [productId]: {
+            ...product,
+            isOnWishlist: !product.isOnWishlist,
+          },
+        },
       };
     }
     default:
