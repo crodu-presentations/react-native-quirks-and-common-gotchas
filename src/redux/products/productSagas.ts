@@ -12,6 +12,8 @@ function generateProducts(totalCount: number = 1000): Product[] {
     name: faker.commerce.product(),
     description: faker.commerce.productDescription(),
     isOnWishlist: false,
+    price: _.random(1, 500, true),
+    updatedAt: faker.date.recent().toISOString(),
   }));
 }
 

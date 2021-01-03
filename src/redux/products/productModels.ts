@@ -4,4 +4,6 @@ export interface Product {
   description: string;
   imageUrl: string;
   isOnWishlist: boolean;
+  price: number;
+  updatedAt: string;
 }
