@@ -34,15 +34,6 @@ exports[`App matches snapshot 1`] = `
       <View
         style={
           Object {
-            "@keyframes spin": Object {
-              "0%": Object {
-                "transform": "rotate(0deg)",
-              },
-              "100%": Object {
-                "transform": "rotate(360deg)",
-              },
-            },
-            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
             "borderColor": "transparent",
             "borderRadius": 32,
             "borderStyle": "solid",
@@ -51,6 +42,11 @@ exports[`App matches snapshot 1`] = `
             "height": 64,
             "margin": 8,
             "position": "absolute",
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
             "width": 64,
           }
         }
@@ -58,16 +54,6 @@ exports[`App matches snapshot 1`] = `
       <View
         style={
           Object {
-            "@keyframes spin": Object {
-              "0%": Object {
-                "transform": "rotate(0deg)",
-              },
-              "100%": Object {
-                "transform": "rotate(360deg)",
-              },
-            },
-            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
-            "animationDelay": "-0.45s",
             "borderColor": "transparent",
             "borderRadius": 32,
             "borderStyle": "solid",
@@ -76,6 +62,11 @@ exports[`App matches snapshot 1`] = `
             "height": 64,
             "margin": 8,
             "position": "absolute",
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
             "width": 64,
           }
         }
@@ -83,16 +74,6 @@ exports[`App matches snapshot 1`] = `
       <View
         style={
           Object {
-            "@keyframes spin": Object {
-              "0%": Object {
-                "transform": "rotate(0deg)",
-              },
-              "100%": Object {
-                "transform": "rotate(360deg)",
-              },
-            },
-            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
-            "animationDelay": "-0.3s",
             "borderColor": "transparent",
             "borderRadius": 32,
             "borderStyle": "solid",
@@ -101,6 +82,11 @@ exports[`App matches snapshot 1`] = `
             "height": 64,
             "margin": 8,
             "position": "absolute",
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
             "width": 64,
           }
         }
@@ -108,16 +94,6 @@ exports[`App matches snapshot 1`] = `
       <View
         style={
           Object {
-            "@keyframes spin": Object {
-              "0%": Object {
-                "transform": "rotate(0deg)",
-              },
-              "100%": Object {
-                "transform": "rotate(360deg)",
-              },
-            },
-            "animation": "spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite",
-            "animationDelay": "-0.15s",
             "borderColor": "transparent",
             "borderRadius": 32,
             "borderStyle": "solid",
@@ -126,6 +102,11 @@ exports[`App matches snapshot 1`] = `
             "height": 64,
             "margin": 8,
             "position": "absolute",
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
             "width": 64,
           }
         }
