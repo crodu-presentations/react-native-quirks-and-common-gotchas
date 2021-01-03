@@ -4,6 +4,9 @@ exports[`App matches snapshot 1`] = `
 <View
   style={
     Object {
+      "@media (min-height: 800) and (max-height: 1200)": Object {
+        "marginVertical": "25%",
+      },
       "alignItems": "center",
       "backgroundColor": "lightblue",
       "flexGrow": 1,
@@ -24,7 +27,7 @@ exports[`App matches snapshot 1`] = `
         },
         Object {
           "fontFamily": "JosefinSans-Light",
-          "fontSize": 36,
+          "fontSize": "2rem",
         },
       ]
     }
@@ -43,7 +46,7 @@ exports[`App matches snapshot 1`] = `
         },
         Object {
           "fontFamily": "JosefinSans-SemiBold",
-          "fontSize": 24,
+          "fontSize": "1.5rem",
         },
       ]
     }
@@ -62,7 +65,7 @@ exports[`App matches snapshot 1`] = `
         },
         Object {
           "fontFamily": "Courier",
-          "fontSize": 16,
+          "fontSize": "1rem",
           "fontWeight": "normal",
         },
       ]
@@ -82,7 +85,7 @@ exports[`App matches snapshot 1`] = `
         },
         Object {
           "fontFamily": "Courier",
-          "fontSize": 16,
+          "fontSize": "1rem",
           "fontWeight": "bold",
         },
       ]
