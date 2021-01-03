@@ -17,6 +17,7 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.8.10",
+    "@react-navigation/stack": "^5.12.8",
     "lottie-ios": "3.1.8",
     "lottie-react-native": "^3.5.0",
     "react": "16.13.1",
@@ -55,6 +56,11 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "setupFiles": ["./jest-setup.js"],
+    "moduleNameMapper": {
+      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/fileMock.js"
+    }
   }
 }
