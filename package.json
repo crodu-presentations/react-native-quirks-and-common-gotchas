@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "e2e:start": "RN_FLAVOR=e2e react-native start",
     "e2e:build:android": "detox build --configuration android.emu.debug",
     "e2e:build:ios": "detox build --configuration ios.sim.debug",
     "e2e:test:android": "detox test --configuration android.emu.debug",
