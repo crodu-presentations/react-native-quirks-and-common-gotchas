@@ -9,7 +9,7 @@ describe('App', () => {
     await expect(element(by.id('container'))).toBeVisible();
   });
 
-  it('should show [Spam JS thread] button', async () => {
-    await expect(element(by.id('button.spam_js_thread'))).toBeVisible();
+  it('should show Home Screen', async () => {
+    await expect(element(by.text('Home Screen'))).toBeVisible();
   });
 });
