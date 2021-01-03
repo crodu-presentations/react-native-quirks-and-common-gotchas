@@ -9,7 +9,7 @@ describe('App', () => {
     await expect(element(by.id('container'))).toBeVisible();
   });
 
-  it('should show Home Screen', async () => {
-    await expect(element(by.text('Home Screen'))).toBeVisible();
+  it('should show "Go to Chart" button', async () => {
+    await expect(element(by.id('btn.go_to_chart.100'))).toBeVisible();
   });
 });
