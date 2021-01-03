@@ -15,7 +15,7 @@ export const Spinner = () => {
 
 const styles = EStyleSheet.create({
   container: {
-    margin: '0 auto',
+    marginHorizontal: 'auto',
     position: 'relative',
     width: 80,
     height: 80,
@@ -25,10 +25,11 @@ const styles = EStyleSheet.create({
     width: 64,
     height: 64,
     margin: 8,
-    borderRadius: '50%',
+    borderRadius: 32,
     borderWidth: 8,
     borderStyle: 'solid',
-    borderColor: '#fff transparent transparent transparent',
+    borderColor: 'transparent',
+    borderTopColor: '#fff',
     animation: 'spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite',
     '@keyframes spin': {
       '0%': {
