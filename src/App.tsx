@@ -5,10 +5,10 @@ const App = () => {
   const myText = '';
 
   return (
-    <View style={styles.container}>
+    <View testID="container" style={styles.container}>
       <Text style={styles.title}>Hello World!</Text>
       {/* we dont want to show the component below if `myText` is empty */}
-      {myText && (
+      {!!myText && (
         <Text style={styles.description}>Hi, the message is: "{myText}"</Text>
       )}
     </View>
