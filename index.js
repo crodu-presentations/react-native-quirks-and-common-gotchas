@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import { AppRegistry, Dimensions } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import App from './src/App';

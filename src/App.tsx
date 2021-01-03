@@ -1,56 +1,22 @@
 import React from 'react';
-import { Button, View } from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
-import { LottieSpinner } from './LottieSpinner';
-import { Spinner } from './Spinner';
-import { SpinnerNative } from './SpinnerNative';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { RootStackParams } from './navigation/RootStackParams';
+import { Routes } from './navigation/Routes';
+import { ChartScreen } from './screens/ChartScreen';
+import { HomeScreen } from './screens/HomeScreen';
+
+const Stack = createStackNavigator<RootStackParams>();
 
 const App = () => {
   return (
-    <View testID="container" style={styles.container}>
-      <View style={styles.spinnerWrapper}>
-        <Spinner />
-        <SpinnerNative />
-        <LottieSpinner />
-      </View>
-      <Button
-        testID="button.spam_js_thread"
-        title="Spam JS Thread"
-        onPress={actBusy}
-      />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name={Routes.Home} component={HomeScreen} />
+        <Stack.Screen name={Routes.Chart} component={ChartScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-function actBusy() {
-  setTimeout(() => {
-    actBusyFor(8000);
-  }, 0);
-}
-
-function actBusyFor(milliseconds: number) {
-  const start = new Date().getTime();
-  let i;
-  for (i = 0; i < 1e8; i++) {
-    if (new Date().getTime() - start > milliseconds) {
-      break;
-    }
-  }
-  return i;
-}
-
-const styles = EStyleSheet.create({
-  container: {
-    backgroundColor: 'lightblue',
-    flexGrow: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  spinnerWrapper: {
-    flexDirection: 'row',
-    margin: 24,
-    marginBottom: 48,
-  },
-});
 
 export default App;
