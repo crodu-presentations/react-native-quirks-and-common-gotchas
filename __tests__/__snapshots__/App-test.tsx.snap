@@ -4,6 +4,9 @@ exports[`App matches snapshot 1`] = `
 <View
   style={
     Object {
+      "@media (min-height: 800) and (max-height: 1200)": Object {
+        "marginVertical": "25%",
+      },
       "alignItems": "center",
       "backgroundColor": "lightblue",
       "flexGrow": 1,

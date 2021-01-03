@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Typography } from './styles/fonts';
 
 const App = () => {
@@ -15,12 +16,15 @@ const App = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     backgroundColor: 'lightblue',
     flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    '@media (min-height: 800) and (max-height: 1200)': {
+      marginVertical: '25%',
+    },
   },
   title: {
     textAlign: 'center',
