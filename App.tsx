@@ -1,38 +1,45 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
+import { Typography } from './styles/fonts';
 
 const App = () => {
-  let myText = 'hello world';
-  myText = '';
-
-  let myValue = 5;
-  myValue = 0;
-
   return (
     <View testID="container" style={styles.container}>
-      <Text style={styles.title}>Hello dev.js</Text>
-      {!!myText && <Text style={styles.description}>{myText}</Text>}
-      {!!myValue && <Text style={styles.description}>{myValue}</Text>}
+      <Text style={[styles.title, Typography.h1]}>Hello dev.js</Text>
+      <Text style={[styles.title, Typography.h2]}>Czy to jest pogrubione?</Text>
+      <Text style={[styles.body, Typography.body]}>Zażółć gęślą jaźń</Text>
+      <Text style={[styles.body, Typography.bodyStrong]}>
+        Pogrubione: Zażółć gęślą jaźń
+      </Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   container: {
     backgroundColor: 'lightblue',
     flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
+    '@media (min-width: 350) and (max-width: 500)': {
+      width: '80%',
+      marginHorizontal: '10%',
+    },
   },
   title: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: 'black',
+    textAlign: 'center',
+    fontSize: 36,
+    fontFamily: 'JosefinSans-Light',
+    color: '#000',
   },
-  description: {
-    marginTop: 8,
+  bold: {
+    fontWeight: 'bold',
+  },
+  body: {
+    fontFamily: 'monospace',
     fontSize: 18,
-    fontWeight: '400',
     color: '#333',
   },
 });
