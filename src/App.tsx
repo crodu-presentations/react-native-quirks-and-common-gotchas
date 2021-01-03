@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import { LottieSpinner } from './components/LottieSpinner';
 import { Spinner } from './components/Spinner';
 import { SpinnerNative } from './components/SpinnerNative';
 import { actBusy } from './utils/actBusy';
@@ -11,6 +12,7 @@ const App = () => {
       <View style={styles.spinnerWrapper}>
         <Spinner />
         <SpinnerNative />
+        <LottieSpinner />
       </View>
       <Button title="Spam JS Thread" onPress={actBusy} />
     </View>
