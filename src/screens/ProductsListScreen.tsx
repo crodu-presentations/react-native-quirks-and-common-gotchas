@@ -10,7 +10,7 @@ import {
   View,
 } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import { connect, ConnectedProps } from 'react-redux';
+import { connect, ConnectedProps, useSelector } from 'react-redux';
 import { ProductStackParams } from '../navigation/navigatorParams';
 import { Routes } from '../navigation/Routes';
 import {
@@ -31,7 +31,7 @@ interface OwnProps {
 }
 
 const mapState = (state: RootState) => ({
-  products: state.products.products,
+  productIds: state.products.ids,
 });
 
 const mapDispatch = {
@@ -52,26 +52,26 @@ class ProductsListScreen extends React.PureComponent<Props> {
     this.props.fetchProducts();
   }
 
-  handleItemPress = (item: Product) => {
-    this.props.navigation.push(Routes.ProductDetails, { productId: item.id });
+  handleItemPress = (item: Product['id']) => {
+    this.props.navigation.push(Routes.ProductDetails, { productId: item });
   };
 
-  renderItem = ({ item }: ListRenderItemInfo<Product>) => {
+  renderItem = ({ item }: ListRenderItemInfo<Product['id']>) => {
     return (
       <ProductListItem
-        item={item}
+        itemId={item}
         onPress={this.handleItemPress}
         onToggleWishlist={this.props.toggleWishlist}
       />
     );
   };
 
-  keyExtractor = (item: Product) => item.id.toString();
+  keyExtractor = (item: Product['id']) => item.toString();
 
   render() {
     return (
       <FlatList
-        data={this.props.products}
+        data={this.props.productIds}
         renderItem={this.renderItem}
         keyExtractor={this.keyExtractor}
         numColumns={NUM_COLUMNS}
@@ -81,22 +81,24 @@ class ProductsListScreen extends React.PureComponent<Props> {
 }
 
 interface ListItemProps {
-  item: Product;
-  onPress: (item: Product) => void;
+  itemId: Product['id'];
+  onPress: (itemId: Product['id']) => void;
   onToggleWishlist: (itemId: Product['id']) => void;
 }
 
-function ProductListItem({ item, onPress, onToggleWishlist }: ListItemProps) {
+function ProductListItem({ itemId, onPress, onToggleWishlist }: ListItemProps) {
   const { width } = useWindowDimensions();
   const itemWidth = width / NUM_COLUMNS;
 
+  const item = useSelector((state: RootState) => state.products.byId[itemId]);
+
   const handlePress = useCallback(() => {
-    onPress(item);
-  }, [onPress, item]);
+    onPress(itemId);
+  }, [onPress, itemId]);
 
   const handleToggle = useCallback(() => {
-    onToggleWishlist(item.id);
-  }, [onToggleWishlist, item.id]);
+    onToggleWishlist(itemId);
+  }, [onToggleWishlist, itemId]);
 
   return (
     <TouchableOpacity style={{ width: itemWidth }} onPress={handlePress}>
