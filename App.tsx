@@ -2,12 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 const App = () => {
+  let myText = 'hello world';
+  myText = '';
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Hello dev.js</Text>
-      <Text style={styles.description}>
-        Na razie nic tu ciekawego nie ma....
-      </Text>
+      {myText && <Text style={styles.description}>{myText}</Text>}
     </View>
   );
 };
