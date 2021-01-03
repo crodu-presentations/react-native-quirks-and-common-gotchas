@@ -57,7 +57,13 @@ class ProductsListScreen extends React.PureComponent<Props> {
   };
 
   renderItem = ({ item }: ListRenderItemInfo<Product>) => {
-    return <ProductListItem item={item} onPress={this.handleItemPress} />;
+    return (
+      <ProductListItem
+        item={item}
+        onPress={this.handleItemPress}
+        onToggleWishlist={this.props.toggleWishlist}
+      />
+    );
   };
 
   keyExtractor = (item: Product) => item.id.toString();
@@ -77,15 +83,20 @@ class ProductsListScreen extends React.PureComponent<Props> {
 interface ListItemProps {
   item: Product;
   onPress: (item: Product) => void;
+  onToggleWishlist: (itemId: Product['id']) => void;
 }
 
-function ProductListItem({ item, onPress }: ListItemProps) {
+function ProductListItem({ item, onPress, onToggleWishlist }: ListItemProps) {
   const { width } = useWindowDimensions();
   const itemWidth = width / NUM_COLUMNS;
 
   const handlePress = useCallback(() => {
     onPress(item);
   }, [onPress, item]);
+
+  const handleToggle = useCallback(() => {
+    onToggleWishlist(item.id);
+  }, [onToggleWishlist, item.id]);
 
   return (
     <TouchableOpacity style={{ width: itemWidth }} onPress={handlePress}>
@@ -103,11 +114,11 @@ function ProductListItem({ item, onPress }: ListItemProps) {
       />
       <View style={styles.wishlistRow}>
         <Text style={[Typography.bodyStrong, styles.name]}>{item.name}</Text>
-        <View style={styles.wishlistButton}>
+        <TouchableOpacity style={styles.wishlistButton} onPress={handleToggle}>
           <Text style={styles.wishlistIcon}>
             {item.isOnWishlist ? '❤️' : '🤍'}
           </Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <Text style={[Typography.body, styles.description]} numberOfLines={3}>
         {item.description}
