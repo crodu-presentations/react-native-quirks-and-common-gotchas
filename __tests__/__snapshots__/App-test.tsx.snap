@@ -22,17 +22,6 @@ exports[`App matches snapshot 1`] = `
   >
     Hello World!
   </Text>
-  <Text
-    style={
-      Object {
-        "color": "#333",
-        "fontSize": 18,
-        "fontWeight": "400",
-        "marginTop": 8,
-      }
-    }
-  >
-    Nothing interesting yet, it just works :)
-  </Text>
+  
 </View>
 `;
