@@ -1,24 +1,25 @@
 import { Platform, TextStyle } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 type FontType = 'h1' | 'h2' | 'body' | 'bodyStrong';
 
-export const Typography: Record<FontType, TextStyle> = {
+export const Typography = EStyleSheet.create({
   h1: {
     fontFamily: 'JosefinSans-Light',
-    fontSize: 36,
+    fontSize: '2rem',
   },
   h2: {
     fontFamily: 'JosefinSans-SemiBold',
-    fontSize: 24,
+    fontSize: '1.5rem',
   },
   body: {
     fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
     fontWeight: 'normal',
-    fontSize: 16,
+    fontSize: '1rem',
   },
   bodyStrong: {
     fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: '1rem',
   },
-};
+}) as Record<FontType, TextStyle>;
