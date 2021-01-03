@@ -1,15 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Typography } from './styles/fonts';
 
 const App = () => {
   return (
     <View testID="container" style={styles.container}>
-      <Text style={styles.title}>Hello World! - in JosefinSans-Light</Text>
-      <Text style={[styles.title, styles.bold]}>
+      <Text style={[styles.title, Typography.h1]}>
+        Hello World! - in JosefinSans-Light
+      </Text>
+      <Text style={[styles.title, Typography.h2]}>
         This text should be written in JosefinSans-Bold font...
       </Text>
-      <Text style={styles.body}>Here we want the monospaced font</Text>
-      <Text style={[styles.body, styles.bold]}>
+      <Text style={[styles.body, Typography.body]}>
+        Here we want the monospaced font
+      </Text>
+      <Text style={[styles.body, Typography.bodyStrong]}>
         And here the font should be monospaced and bold.
       </Text>
     </View>

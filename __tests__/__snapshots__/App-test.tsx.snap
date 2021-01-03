@@ -14,13 +14,19 @@ exports[`App matches snapshot 1`] = `
 >
   <Text
     style={
-      Object {
-        "color": "#000",
-        "fontFamily": "JosefinSans-Light",
-        "fontSize": 36,
-        "marginBottom": 10,
-        "textAlign": "center",
-      }
+      Array [
+        Object {
+          "color": "#000",
+          "fontFamily": "JosefinSans-Light",
+          "fontSize": 36,
+          "marginBottom": 10,
+          "textAlign": "center",
+        },
+        Object {
+          "fontFamily": "JosefinSans-Light",
+          "fontSize": 36,
+        },
+      ]
     }
   >
     Hello World! - in JosefinSans-Light
@@ -36,7 +42,8 @@ exports[`App matches snapshot 1`] = `
           "textAlign": "center",
         },
         Object {
-          "fontWeight": "bold",
+          "fontFamily": "JosefinSans-SemiBold",
+          "fontSize": 24,
         },
       ]
     }
@@ -45,13 +52,20 @@ exports[`App matches snapshot 1`] = `
   </Text>
   <Text
     style={
-      Object {
-        "color": "#333",
-        "fontFamily": "monospace",
-        "fontSize": 18,
-        "marginBottom": 10,
-        "textAlign": "center",
-      }
+      Array [
+        Object {
+          "color": "#333",
+          "fontFamily": "monospace",
+          "fontSize": 18,
+          "marginBottom": 10,
+          "textAlign": "center",
+        },
+        Object {
+          "fontFamily": "Courier",
+          "fontSize": 16,
+          "fontWeight": "normal",
+        },
+      ]
     }
   >
     Here we want the monospaced font
@@ -67,6 +81,8 @@ exports[`App matches snapshot 1`] = `
           "textAlign": "center",
         },
         Object {
+          "fontFamily": "Courier",
+          "fontSize": 16,
           "fontWeight": "bold",
         },
       ]
