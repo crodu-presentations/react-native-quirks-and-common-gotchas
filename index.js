@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import { AppRegistry, Dimensions } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import './src/utils/intlPolyfill';
 import App from './src/App';
 import { name as appName } from './app.json';
 
