@@ -9,13 +9,13 @@ export const Spinner = () => {
   useEffect(() => {
     Animated.loop(
       Animated.stagger(
-        150,
+        120,
         spins.map((spin) =>
           Animated.timing(spin, {
             toValue: 360,
             duration: 1200,
             easing: Easing.bezier(0.5, 0, 0.5, 1),
-            useNativeDriver: true,
+            useNativeDriver: false, // see https://github.com/facebook/react-native/issues/28517
           }),
         ),
       ),
