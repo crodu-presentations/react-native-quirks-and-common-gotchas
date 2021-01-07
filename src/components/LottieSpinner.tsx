@@ -7,6 +7,9 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 // though works like a charm on Android device and iOS (simulator & device)
 // https://github.com/lottie-react-native/lottie-react-native/issues/690
 
+// Animation from Lottie files
+// https://lottiefiles.com/27-loading
+
 export const LottieSpinner = () => {
   return (
     <View style={styles.container}>
